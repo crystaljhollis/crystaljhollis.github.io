@@ -1,13 +1,25 @@
-# 👋 Hi, I’m @crystaljhollis
-This is the repository for my portfolio website at crystaljhollis.com.
-- 👀 I am interested in leveraging data science, machine learning, and GIS to address public health challenges such as health disparities, misinformation, and accessibility.
-- 🌱 I completed a Python Developer Certificate at Dallas College and pursuing additional training in data analytics, GIS programming, and applied mathematics. I am also preparing for graduate study in Health Data Science.
-- 💞️ I am open to collaborative opportunities in applied data science, ethical AI development, public health informatics, and interdisciplinary research initiatives.
-- 📫 You can reach me at [crystaljhollis@gmail.com](mailto:crystaljhollis@gmail.com) or connect via [LinkedIn](https://www.linkedin.com/in/crystaljhollis). Portfolio and project samples are available at [crystaljhollis.com](https://crystaljhollis.com).
-- 😄 Pronouns: she/they
-- ⚡ Fun fact: In addition to my technical background, I have experience in media production and communications, which supports my work translating complex data into accessible, actionable insights.
+# Crystal Hollis Portfolio
 
-<!---
-crystaljhollis/crystaljhollis is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Static GitHub Pages portfolio for [crystaljhollis.com](https://crystaljhollis.com).
+
+The site presents professional experience, selected data and automation projects, research interests, and technical preparation for hiring managers and graduate admissions reviewers.
+
+The flagship Metadata Wizard case study includes a synthetic browser demo and a sanitized public copy of the Python desktop application. The original operational source remains outside this repository.
+
+## Positioning
+
+**Data Analyst | AI & Automation | Enterprise Systems**
+
+Core themes include Python, R, SQL, GIS, applied AI, data quality, public health, human-centered systems, and technical communication.
+
+## Local preview
+
+```bash
+python3 -m http.server 8765
+```
+
+Open `http://127.0.0.1:8765/` in a browser.
+
+## Privacy
+
+Institutional work is intentionally sanitized. Do not add student information, proprietary screenshots, internal exports, credentials, unpublished taxonomies, or identifiable operational records to the public site.

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study: an operational Python desktop workflow for human-reviewed media metadata, accessibility alt text, controlled vocabulary, and non-destructive XMP/IPTC automation." />
+  <meta name="theme-color" content="#022c52" />
+  <meta property="og:title" content="AI-Assisted Metadata Wizard | Crystal Hollis" />
+  <meta property="og:description" content="Human-in-the-loop Python automation for media metadata, accessibility, controlled vocabulary, and quality control." />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AI-Assisted Metadata Wizard | Crystal Hollis" />
+  <meta name="twitter:description" content="Human-in-the-loop Python automation for media metadata, accessibility, controlled vocabulary, and quality control." />
+  <title>AI-Assisted Metadata Wizard | Crystal Hollis</title>
+  <link rel="canonical" href="https://crystaljhollis.com/projects/metadata-wizard/" />
+  <link rel="stylesheet" href="../../style.css?v=20260825a" />
+  <link rel="icon" href="../../img/favicon.ico" type="image/x-icon" />
+  <script src="../../script.js?v=20260825a" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../../index.html" aria-label="Crystal Hollis home"><img src="../../img/CJH Square Icon.png" alt="" width="48" height="48" /><span>Crystal Hollis</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="sr-only">Toggle navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="site-navigation" class="site-nav" aria-label="Primary navigation"><a href="../../index.html">Home</a><a aria-current="page" href="../">Projects</a><a href="../../experience.html">Experience</a><a href="../../research.html">Research &amp; AI</a><a href="../../coursework.html">Education</a><a href="../../bio.html">About</a><a href="../../assets/resume.pdf">Resume</a><a href="mailto:crystaljhollis@gmail.com">Contact</a></nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero case-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span aria-hidden="true">/</span><a href="../">Projects</a><span aria-hidden="true">/</span><span>Metadata Wizard</span></nav>
+        <div class="case-hero-grid">
+          <div>
+            <p class="eyebrow">Python application, applied AI &amp; accessibility</p>
+            <h1>AI-Assisted Metadata Wizard</h1>
+            <p class="page-lead">An operational, human-in-the-loop desktop workflow that converts reviewed intake records into structured media metadata, supports accessibility alt-text drafts, and keeps optional AI keywords under human quality control.</p>
+            <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>Tkinter</li><li>OpenAI Vision</li><li>ExifTool</li><li>IPTC/XMP</li><li>Accessibility</li></ul>
+            <div class="button-row"><a class="button button-light" href="demo/">Try the synthetic demo</a><a class="text-link case-hero-link" href="../../assets/metadata-wizard-portfolio-edition.zip" download>Download desktop package</a></div>
+          </div>
+          <div class="case-hero-visual wizard-window" role="img" aria-label="Stylized Metadata Wizard interface showing intake fields, accessibility options, and quality-control output">
+            <div class="wizard-window-bar"><span></span><span></span><span></span><strong>Metadata Wizard</strong></div>
+            <div class="wizard-window-body">
+              <div class="wizard-ui-section"><small>Reviewed intake</small><span class="wizard-input wide"></span><span class="wizard-input"></span><span class="wizard-input"></span></div>
+              <div class="wizard-ui-section wizard-ui-options"><small>Assisted tasks</small><span>✓ Structured metadata</span><span>✓ Accessibility draft</span><span>✓ Keyword review</span></div>
+              <div class="wizard-ui-action">Apply to files</div>
+              <div class="wizard-ui-log"><span>Template and IPTC/XMP fields applied</span><span>Alt text drafted for review</span><span>Optional keywords separated for QC</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container case-layout">
+        <article class="case-content">
+          <section id="overview"><p class="eyebrow">01</p><h2>Overview</h2><p>The Metadata Wizard grew from an earlier metadata and keyword prototype into an operational desktop workflow used in Dedman College media post-production. It connects reviewed SharePoint intake, structured metadata automation, assisted accessibility outputs, Adobe Bridge quality control, and the media-archive workflow.</p><div class="stat-grid"><div class="stat-card"><strong>2,628 files</strong><span>Documented summer backlog through August 2, 2026</span></div><div class="stat-card"><strong>Two review stages</strong><span>Reviewed intake and final Adobe Bridge quality control</span></div><div class="stat-card"><strong>Non-destructive</strong><span>ExifTool writes metadata without recompressing pixels</span></div></div></section>
+
+          <section id="problem"><p class="eyebrow">02</p><h2>Problem or research question</h2><p>Professional image batches require consistent metadata across multiple standards, but manual entry is repetitive and vulnerable to omissions. Accessibility descriptions and image-specific keywords add value, yet AI output cannot safely become authoritative metadata without review.</p><div class="limitation-box"><strong>Design question:</strong> How can automation reduce repetitive metadata work while preserving human ownership of descriptive, accessibility, and taxonomy decisions?</div></section>
+
+          <section id="context"><p class="eyebrow">03</p><h2>Context and role</h2><p>I designed and implemented the Python application around the live Dedman College post-production workflow. My role included transferring reviewed intake records into the application, mapping the intake-to-archive process, defining field transformations, building the Tkinter interface, integrating ExifTool and optional vision-model calls, and performing final metadata review and editing in Adobe Bridge.</p><p>This public case study and source copy intentionally replace organization-specific templates, names, paths, records, and keyword lists with synthetic examples.</p></section>
+
+          <section id="approach"><p class="eyebrow">04</p><h2>Approach and workflow</h2><p><strong>Production workflow:</strong> A team member prepares the initial metadata record in SharePoint. I transfer the reviewed record into Metadata Wizard, which parses the intake and applies structured metadata while generating optional assisted outputs. I then review and refine the resulting metadata in Adobe Bridge before the files move forward in the media-archive workflow.</p><div class="wizard-workflow" aria-label="Human-in-the-loop Metadata Wizard production workflow"><div><strong>SharePoint intake</strong><span>Team member drafts the record</span></div><i aria-hidden="true">→</i><div><strong>Reviewed transfer</strong><span>Human-confirmed fields enter the tool</span></div><i aria-hidden="true">→</i><div><strong>Metadata Wizard</strong><span>Structured and assisted outputs</span></div><i aria-hidden="true">→</i><div><strong>Adobe Bridge QC</strong><span>Final human review and editing</span></div><i aria-hidden="true">→</i><div><strong>Archive workflow</strong><span>Approved assets move forward</span></div></div><ol class="workflow-list"><li>A team member prepares the initial metadata record in SharePoint.</li><li>I transfer the reviewed record into Metadata Wizard and confirm the parsed fields.</li><li>The Wizard applies structured IPTC/XMP metadata and generates optional accessibility or keyword outputs.</li><li>Controlled-vocabulary matches, exceptions, successes, and failures remain visible for review.</li><li>I review and refine the resulting metadata in Adobe Bridge.</li><li>Approved assets continue into the media-archive workflow.</li></ol></section>
+
+          <section id="tools"><p class="eyebrow">05</p><h2>Tools and technologies</h2><ul class="tag-list"><li>Python</li><li>Tkinter</li><li>Threading and queues</li><li>OpenAI Responses API</li><li>Vision input</li><li>ExifTool</li><li>IPTC</li><li>XMP</li><li>Pillow</li><li>macOS Keychain</li><li>Markdown</li></ul></section>
+
+          <section id="data"><p class="eyebrow">06</p><h2>Data and inputs</h2><ul class="bullet-list"><li>JPG, JPEG, PNG, and WEBP image batches.</li><li>Labeled intake fields such as headline, description, location, title, batch keywords, and job identifier.</li><li>Configurable XMP templates stored outside the application logic.</li><li>An optional approved keyword list used to classify AI suggestions.</li><li>An optional API key retrieved from macOS Keychain or an environment variable.</li></ul><p>The interactive demo uses a completely synthetic community technology workshop record and performs no uploads, API calls, or file writes.</p></section>
+
+          <section id="results"><p class="eyebrow">07</p><h2>Results and measurable outcomes</h2><p>The Metadata Wizard is currently used in Dedman College media post-production as an intermediate automation and quality-control step between SharePoint intake and final Adobe Bridge review. It reduces repetitive field entry while preserving human review at both the intake and final metadata stages.</p><div class="evidence-box"><h3>Operational scale and verified behaviors</h3><ul class="bullet-list"><li>The workflow supported a documented summer production backlog of 2,628 files across items scheduled through August 2, 2026.</li><li>Metadata-only writes preserve image pixels instead of recompressing the source asset.</li><li>Accessibility drafts are written to the dedicated XMP accessibility field and can be skipped when an existing value is present.</li><li>Optional AI keywords remain in a Markdown review report rather than being automatically committed to image files.</li><li>Per-image failures are logged while the remaining batch continues.</li></ul></div></section>
+
+          <section id="challenges"><p class="eyebrow">08</p><h2>Technical challenges</h2><ul class="bullet-list"><li><strong>Responsive desktop UI:</strong> Long-running file and API operations run in a background thread while a queue safely updates the Tkinter interface.</li><li><strong>Credential handling:</strong> The application can store an API key in macOS Keychain without placing the secret in source files or command arguments.</li><li><strong>Metadata compatibility:</strong> Values are mapped across modern XMP and legacy IPTC fields, including handling the legacy writer-field byte limit.</li><li><strong>Model reliability:</strong> Prompts prohibit unsupported identities, events, relationships, and locations, while outputs remain drafts subject to human review.</li></ul></section>
+
+          <section id="limitations"><p class="eyebrow">09</p><h2>Limitations</h2><div class="limitation-box"><ul class="bullet-list"><li>The desktop interface and Keychain integration are currently oriented toward macOS.</li><li>ExifTool and Python dependencies must be installed before processing files.</li><li>Vision-generated descriptions can still omit context or make mistakes and require human review.</li><li>Controlled-vocabulary matching is exact and does not yet model synonyms or hierarchical relationships.</li><li>The public source excludes production templates, operational records, credentials, and internal vocabularies.</li></ul></div></section>
+
+          <section id="future"><p class="eyebrow">10</p><h2>Future improvements</h2><ul class="bullet-list"><li>Package the desktop application with a guided dependency installer.</li><li>Add cross-platform secure credential storage.</li><li>Create automated tests for intake parsing, field mapping, and metadata verification.</li><li>Add synonym-aware vocabulary review without allowing silent keyword approval.</li><li>Provide before-and-after metadata comparison inside the interface.</li></ul></section>
+
+          <section id="evidence"><p class="eyebrow">11</p><h2>Code, demo, and supporting evidence</h2><div class="source-links"><a class="button button-primary" href="demo/">Open synthetic demo</a><a class="button button-secondary" href="../../assets/metadata-wizard-portfolio-edition.zip" download>Download desktop package</a><a class="button button-secondary" href="source/metadata_wizard.py" download>Python source</a><a class="button button-secondary" href="source/README.md">Setup notes</a></div><p class="privacy-note">The downloadable application is a public-safe copy. It preserves the architecture while replacing organization-specific configuration with generic templates and synthetic data. After installing the documented dependencies, macOS users can double-click the included launcher. The original operational file was not modified.</p><p>Related evolution: <a class="text-link" href="../metadata-optimizer/">Metadata &amp; Keyword Optimizer</a>, the earlier prototype that explored controlled taxonomy and AI-assisted suggestions before this desktop workflow was developed.</p></section>
+        </article>
+
+        <aside class="case-toc"><strong>Case study</strong><nav aria-label="On this page"><a href="#overview">Overview</a><a href="#problem">Problem</a><a href="#context">Context &amp; role</a><a href="#approach">Approach</a><a href="#tools">Tools</a><a href="#data">Inputs</a><a href="#results">Results</a><a href="#challenges">Challenges</a><a href="#limitations">Limitations</a><a href="#future">Future</a><a href="#evidence">Evidence</a></nav></aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="../../index.html"><img src="../../img/CJH Square Icon.png" alt="" width="42" height="42" /><span>Crystal Hollis</span></a><p>Data analysis, automation, and human-centered systems.</p></div><nav aria-label="Footer navigation"><a href="../">Projects</a><a href="../../experience.html">Experience</a><a href="../../research.html">Research &amp; AI</a><a href="../../coursework.html">Education</a><a href="../../bio.html">About</a></nav><div class="footer-contact"><a href="mailto:crystaljhollis@gmail.com">crystaljhollis@gmail.com</a><a href="https://github.com/crystaljhollis" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/crystaljhollis" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div><div class="container footer-bottom"><p>&copy; 2026 Crystal Hollis</p><p>Built for clarity, accessibility, and useful evidence.</p></div></footer>
+</body>
+</html>

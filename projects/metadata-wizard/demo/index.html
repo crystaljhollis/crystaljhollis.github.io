@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Try a synthetic, browser-based demonstration of Crystal Hollis's AI-assisted Metadata Wizard workflow." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#022c52" />
+  <title>Metadata Wizard Demo | Crystal Hollis</title>
+  <link rel="canonical" href="https://crystaljhollis.com/projects/metadata-wizard/demo/" />
+  <link rel="stylesheet" href="../../../style.css?v=20260825a" />
+  <link rel="icon" href="../../../img/favicon.ico" type="image/x-icon" />
+  <script src="../../../script.js?v=20260825a" defer></script>
+  <script src="demo.js?v=20260825a" defer></script>
+</head>
+<body class="demo-body">
+  <a class="skip-link" href="#main-content">Skip to demo</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../../../index.html" aria-label="Crystal Hollis home"><img src="../../../img/CJH Square Icon.png" alt="" width="48" height="48" /><span>Crystal Hollis</span></a>
+      <a class="button button-secondary demo-back-link" href="../">Back to case study</a>
+    </div>
+  </header>
+
+  <main id="main-content" class="wizard-demo-main">
+    <section class="demo-intro">
+      <div class="container demo-intro-grid">
+        <div>
+          <p class="eyebrow">Interactive synthetic demo</p>
+          <h1>See the Metadata Wizard workflow without touching a real file.</h1>
+          <p class="page-lead">This browser demonstration uses invented records and a simulated image batch. It does not upload files, call an AI service, write metadata, or use organizational information.</p>
+        </div>
+        <div class="demo-safety-note" role="note">
+          <strong>Safe by design</strong>
+          <span>Synthetic input</span>
+          <span>No API key</span>
+          <span>No file writes</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container wizard-demo-shell">
+        <aside class="demo-preview-panel" aria-labelledby="demo-image-title">
+          <div class="synthetic-photo" role="img" aria-label="Stylized illustration of six people collaborating around laptops at a community technology workshop">
+            <span class="workshop-sign">Community Technology Workshop</span>
+            <span class="demo-person person-one"></span><span class="demo-person person-two"></span><span class="demo-person person-three"></span>
+            <span class="demo-person person-four"></span><span class="demo-person person-five"></span><span class="demo-person person-six"></span>
+            <span class="demo-table"></span><span class="demo-laptop laptop-one"></span><span class="demo-laptop laptop-two"></span><span class="demo-laptop laptop-three"></span>
+          </div>
+          <h2 id="demo-image-title">Synthetic batch</h2>
+          <p><strong>3 demo images</strong><br />No files leave your browser.</p>
+          <button class="button button-secondary" id="load-example" type="button">Reload synthetic example</button>
+        </aside>
+
+        <div class="demo-workspace">
+          <div class="demo-step">
+            <div class="step-heading"><span>1</span><div><p class="eyebrow">Reviewed intake</p><h2>Paste and parse labeled fields</h2></div></div>
+            <label for="intake-record">Synthetic intake record</label>
+            <textarea id="intake-record" rows="11" spellcheck="false"></textarea>
+            <button class="button button-small" id="parse-fields" type="button">Parse fields</button>
+            <p class="form-status" id="parse-status" aria-live="polite">The sample is ready to parse.</p>
+          </div>
+
+          <div class="demo-step">
+            <div class="step-heading"><span>2</span><div><p class="eyebrow">Structured metadata</p><h2>Review the populated form</h2></div></div>
+            <div class="demo-field-grid">
+              <label>Headline<input id="field-headline" type="text" /></label>
+              <label>Title<input id="field-title" type="text" /></label>
+              <label class="field-wide">Description<textarea id="field-description" rows="3"></textarea></label>
+              <label class="field-wide">Batch keywords<input id="field-keywords" type="text" /></label>
+              <label>City<input id="field-city" type="text" /></label>
+              <label>State<input id="field-state" type="text" /></label>
+              <label>Collection<input id="field-collection" type="text" /></label>
+              <label>Batch<input id="field-batch" type="text" /></label>
+            </div>
+          </div>
+
+          <div class="demo-step">
+            <div class="step-heading"><span>3</span><div><p class="eyebrow">Human-in-the-loop options</p><h2>Choose assisted tasks</h2></div></div>
+            <div class="demo-options">
+              <label><input id="option-template" type="checkbox" checked /> Apply generic XMP/IPTC template</label>
+              <label><input id="option-alt" type="checkbox" checked /> Draft accessibility alt text</label>
+              <label><input id="option-keywords" type="checkbox" checked /> Suggest optional keywords for review</label>
+            </div>
+            <button class="button button-primary demo-run-button" id="run-demo" type="button">Run safe demonstration</button>
+            <div class="demo-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+            <p class="form-status" id="run-status" aria-live="polite">Ready. Nothing runs until you choose the demonstration.</p>
+          </div>
+
+          <section class="demo-results" id="demo-results" aria-labelledby="demo-results-title" hidden>
+            <div class="step-heading"><span aria-hidden="true">✓</span><div><p class="eyebrow">QC-ready output</p><h2 id="demo-results-title">Drafts are separated from approved metadata</h2></div></div>
+            <div class="demo-result-grid">
+              <article><h3>Accessibility alt text</h3><p id="alt-result"></p><span class="review-label">Draft for human review</span></article>
+              <article><h3>Approved-list candidates</h3><ul class="result-tags" id="approved-result"></ul></article>
+              <article><h3>Review exceptions</h3><ul class="result-tags result-tags-review" id="review-result"></ul></article>
+            </div>
+            <details class="details-panel"><summary>View simulated XMP/IPTC output</summary><pre id="metadata-output"></pre></details>
+            <div class="demo-log" aria-label="Simulated processing log"><strong>Run log</strong><ol id="demo-log-list"></ol></div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-bottom"><p>&copy; 2026 Crystal Hollis</p><p>This demonstration uses synthetic data and performs no file or API operations.</p></div></footer>
+</body>
+</html>
+

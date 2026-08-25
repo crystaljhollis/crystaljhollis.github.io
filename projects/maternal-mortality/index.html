@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A post-class, reproducible analysis of U.S. maternal mortality trends and demographic disparities using CDC/NCHS surveillance data." />
+  <meta name="theme-color" content="#022c52" />
+  <meta property="og:title" content="U.S. Maternal Mortality Trends &amp; Demographic Disparities | Crystal Hollis" />
+  <meta property="og:description" content="A post-class revision focused on reproducible public-health data analysis, demographic disparities, and responsible interpretation." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://crystaljhollis.com/img/maternal.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="U.S. Maternal Mortality Trends &amp; Demographic Disparities | Crystal Hollis" />
+  <meta name="twitter:description" content="A post-class revision focused on reproducible public-health data analysis, demographic disparities, and responsible interpretation." />
+  <meta name="twitter:image" content="https://crystaljhollis.com/img/maternal.png" />
+  <title>U.S. Maternal Mortality Trends &amp; Demographic Disparities | Crystal Hollis</title>
+  <link rel="canonical" href="https://crystaljhollis.com/projects/maternal-mortality/" />
+  <link rel="stylesheet" href="../../style.css?v=20260825a" />
+  <link rel="icon" href="../../img/favicon.ico" type="image/x-icon" />
+  <script src="../../script.js?v=20260825a" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../../index.html"><img src="../../img/CJH Square Icon.png" alt="" width="48" height="48" /><span>Crystal Hollis</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="sr-only">Toggle navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="site-navigation" class="site-nav" aria-label="Primary navigation"><a href="../../index.html">Home</a><a aria-current="page" href="../">Projects</a><a href="../../experience.html">Experience</a><a href="../../research.html">Research &amp; AI</a><a href="../../coursework.html">Education</a><a href="../../bio.html">About</a><a href="../../assets/resume.pdf">Resume</a><a href="mailto:crystaljhollis@gmail.com">Contact</a></nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero case-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../../index.html">Home</a><span>/</span><a href="../">Projects</a><span>/</span><span>Maternal mortality</span></div>
+        <div class="case-hero-grid">
+          <div>
+            <p class="eyebrow">Public-health data analysis | Post-class revision | Revised August 24, 2026</p>
+            <h1>U.S. Maternal Mortality Trends &amp; Demographic Disparities</h1>
+            <p class="page-lead">A reproducible revision of a Dallas College PHED 1304 project, redesigned around what aggregate CDC/NCHS surveillance data can actually support.</p>
+            <ul class="tag-list"><li>Python</li><li>pandas</li><li>Matplotlib</li><li>Seaborn</li><li>CDC/NCHS</li><li>Reproducibility</li></ul>
+            <div class="button-row"><a class="button button-light" href="../../assets/maternal-mortality-analysis.pdf">Read research paper</a><a class="text-link" style="color:#fff" href="https://github.com/crystaljhollis/DallasCollege_Portfolio/tree/main/PHED1304_PersonalCommunityHealth" target="_blank" rel="noopener noreferrer">Revised repository <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <figure class="case-hero-visual"><img src="../../img/maternal.png" alt="Line chart showing U.S. maternal mortality rates across 12-month-ending estimates from 2019 through June 2024" width="2167" height="1065" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="stat-grid"><div class="stat-card"><strong>660</strong><span>CDC/NCHS records in the course-era snapshot</span></div><div class="stat-card"><strong>12-month</strong><span>rolling surveillance windows</span></div><div class="stat-card"><strong>Aug 2026</strong><span>post-class revision date</span></div></div>
+        <div class="case-layout">
+          <article class="case-content">
+            <section id="overview"><h2>Overview</h2><p>The class submission centered on an intersectional research paper about maternal mortality and reproductive health. The original machine-learning notebook was an experiment developed in support of that paper, using techniques from Python Data Science Tools.</p><p>This later revision is written for graduate admissions reviewers and prospective employers evaluating public-health data analysis, reproducibility, data-quality judgment, and responsible analytical practice. The stronger portfolio story is the methodological review: an initial ML design was examined, its limits were identified, and the project was redesigned around defensible descriptive questions.</p></section>
+
+            <section id="audience"><h2>Why this revision exists</h2><div class="evidence-box"><h3>From class experiment to portfolio evidence</h3><p>This is clearly a post-class update, not a rewrite of the original submission. The research paper remains the focus of the class record. The revised notebook shows continued learning after class: it identifies target leakage, respects the dependence in rolling estimates, and communicates what the data cannot establish.</p></div></section>
+
+            <section id="questions"><h2>Research questions</h2><ul class="bullet-list"><li>How did U.S. maternal mortality rates change during the observed period?</li><li>How did rates differ across age groups?</li><li>How did rates differ across racial and Hispanic-origin groups?</li><li>Which patterns appear persistent when comparable June endpoints are used?</li><li>How do provisional estimates, suppression, and rolling windows affect interpretation?</li></ul></section>
+
+            <section id="workflow"><h2>How the analysis works</h2><ol class="workflow-list"><li><strong>Preserve the source.</strong> Keep the original CDC/NCHS snapshot as raw input so the revision remains comparable to the class project.</li><li><strong>Assess data quality.</strong> Parse dates and numeric fields, record suppression and reliability flags, and avoid imputing reported rates.</li><li><strong>Separate analytical groupings.</strong> Analyze total, age, and race/Hispanic-origin records as overlapping summaries rather than independent observations.</li><li><strong>Visualize surveillance.</strong> Use rolling estimates for context while explaining that adjacent months overlap.</li><li><strong>Compare like with like.</strong> Use June-ending estimates for year-over-year comparisons because June is available for every year in the snapshot.</li><li><strong>Interpret cautiously.</strong> Describe patterns without treating demographic categories as causes or making intervention claims.</li></ol></section>
+
+            <section id="tools"><h2>Tools &amp; technologies</h2><ul class="tag-list"><li>Python 3.12</li><li>pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>JupyterLab</li><li>Git</li></ul></section>
+
+            <section id="data"><h2>Data &amp; definitions</h2><p>The CDC/NCHS source reports maternal deaths per 100,000 live births for 12-month-ending periods. The snapshot covers January 2019 through June 2024 and contains total, age, and race/Hispanic-origin groupings. The source suppresses death counts from 1 to 9 for confidentiality and suppresses or flags rates based on fewer than 20 deaths because of reliability concerns.</p><p>Race and Hispanic origin are reported demographic groupings, not proxies for socioeconomic status. The dataset does not include income, education, insurance, clinical history, prenatal-care access, rurality, provider availability, or other independent predictors.</p><p><a class="text-link" href="https://www.cdc.gov/nchs/nvss/vsrr/provisional-maternal-deaths-rates.htm" target="_blank" rel="noopener noreferrer">Read the CDC/NCHS methodology guidance <span aria-hidden="true">↗</span></a></p></section>
+
+            <section id="revision"><h2>Methodological revision</h2><div class="limitation-box"><strong>The original ML design contained target leakage.</strong> Maternal deaths and live births define the reported maternal mortality rate, so using them as model inputs made the original predictive evaluation invalid. This revised analysis removes the predictive claim rather than polishing a misleading model score.</div><p>The original course version is preserved in Git history and tagged locally as <code>course-submission-2025</code>. The revised repository documents the change openly so the project shows coursework, continued learning, methodological critique, and responsible redesign.</p></section>
+
+            <section id="results"><h2>What the revised analysis shows</h2><p>The overall June-ending rate was 19.2 per 100,000 live births in 2019 and 19.6 in 2024. Among age groups, the 40-years-and-over group had the highest reported rate at both endpoints, increasing from 72.9 to 74.9. Among non-suppressed race and Hispanic-origin comparisons, the Black, Non-Hispanic group increased from 41.1 to 51.2. These are descriptive differences in reported national estimates, not causal findings.</p><figure class="media-frame"><img src="../../img/maternal-comparison.png" alt="Two-panel bar chart comparing June-ending 2019 and 2024 maternal mortality rates by age and race or Hispanic origin" width="2823" height="1123" loading="lazy" /><figcaption>Comparable June-ending 12-month estimates. Suppressed categories are omitted from the plotted comparison rather than treated as zero.</figcaption></figure><figure class="media-frame"><img src="../../img/maternal-age.png" alt="Line chart showing maternal mortality rates by age group from 2019 through June 2024" width="2166" height="1065" loading="lazy" /><figcaption>Age-group surveillance trends, shown separately from total and race/Hispanic-origin records.</figcaption></figure><figure class="media-frame"><img src="../../img/maternal-race.png" alt="Line chart showing maternal mortality rates by race and Hispanic origin from 2019 through June 2024" width="2354" height="1265" loading="lazy" /><figcaption>Race and Hispanic-origin surveillance trends. Gaps reflect suppressed or unavailable rates.</figcaption></figure></section>
+
+            <section id="benchmark"><h2>What the final-data benchmark teaches us</h2><p>The course-era June-ending snapshot reported an overall 2024 rate of 19.6 per 100,000 live births. The CDC/NCHS final calendar-year 2024 estimate is 17.9, a difference of 1.7 rate points, or about 9.5% relative to the final value. That is a useful quality check, but it is not pure model error: the comparison uses different time windows and data vintages.</p><p>Across the like-group comparisons available from 2019 through 2024, the mean absolute difference was 4.02 rate points for the total series, 7.97 for age groups, and 4.35 for race and Hispanic-origin groups. The largest age-group difference was 41.2 points. The pattern reinforces why future analyses should define the estimand first, compare like-for-like periods, separate provisional from final data, record the source vintage, and report signed, absolute, and percentage differences.</p><figure class="media-frame"><img src="../../img/maternal-benchmark.png" alt="Benchmark chart comparing June-ending provisional rates with final annual CDC maternal mortality rates" width="3223" height="1123" loading="lazy" /><figcaption>Benchmark comparison for overlapping groups. Differences reflect both measurement revision and the mismatch between June-ending rolling windows and final calendar-year estimates.</figcaption></figure></section>
+
+            <section id="limitations"><h2>Limitations</h2><ul class="bullet-list"><li>These are national aggregate surveillance estimates, not individual-level observations.</li><li>Adjacent 12-month-ending windows overlap and are not independent.</li><li>Provisional estimates may change as records are received and reviewed.</li><li>Suppression and low-count reliability rules limit some subgroup comparisons.</li><li>Death-certificate reporting and classification can affect measurement.</li><li>The dataset cannot establish individual risk, causality, or intervention effectiveness.</li></ul></section>
+
+            <section id="ai-disclosure"><h2>AI-assisted revision disclosure</h2><p>AI tools assisted with repository review, methodological critique, code restructuring, documentation drafting, and portfolio copy editing during this post-class update. Crystal Hollis remains responsible for the final research questions, analytical choices, data handling, interpretation, limitations, and review of the finished materials.</p></section>
+
+            <section id="evidence"><h2>Evidence &amp; links</h2><div class="source-links"><a class="button button-primary" href="../../assets/maternal-mortality-analysis.pdf">Research paper</a><a class="button button-secondary" href="https://github.com/crystaljhollis/DallasCollege_Portfolio/tree/main/PHED1304_PersonalCommunityHealth" target="_blank" rel="noopener noreferrer">Revised notebook repository</a><a class="button button-secondary" href="https://data.cdc.gov/NCHS/VSRR-Provisional-Maternal-Death-Counts-and-Rates/e2d5-ggg7/about_data" target="_blank" rel="noopener noreferrer">CDC/NCHS source</a></div></section>
+          </article>
+          <aside class="case-toc"><strong>In this case study</strong><nav><a href="#overview">Overview</a><a href="#audience">Why revise it</a><a href="#questions">Questions</a><a href="#workflow">How it works</a><a href="#tools">Tools</a><a href="#data">Data</a><a href="#revision">Revision</a><a href="#results">Results</a><a href="#benchmark">Final-data benchmark</a><a href="#limitations">Limitations</a><a href="#ai-disclosure">AI disclosure</a><a href="#evidence">Evidence</a></nav></aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="../../index.html"><img src="../../img/CJH Square Icon.png" alt="" width="42" height="42" /><span>Crystal Hollis</span></a><p>Data analysis, automation, and human-centered systems.</p></div><nav aria-label="Footer navigation"><a href="../">Projects</a><a href="../../experience.html">Experience</a><a href="../../research.html">Research &amp; AI</a><a href="../../coursework.html">Education</a><a href="../../bio.html">About</a></nav><div class="footer-contact"><a href="mailto:crystaljhollis@gmail.com">crystaljhollis@gmail.com</a><a href="https://github.com/crystaljhollis" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/crystaljhollis" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div><div class="container footer-bottom"><p>&copy; 2026 Crystal Hollis</p><p>Built for clarity, accessibility, and useful evidence.</p></div></footer>
+</body>
+</html>
